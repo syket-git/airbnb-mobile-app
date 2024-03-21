@@ -1,6 +1,8 @@
+import ListingDataGeo from "@/assets/data/airbnb-listings.geo.json";
 import ListingData from "@/assets/data/airbnb-listings.json";
 import ExploreHeader from "@/components/ExploreHeader";
-import Listing from "@/components/Listing";
+import ListingsBottomSheet from "@/components/ListingsBottomSheet";
+import ListingsMap from "@/components/ListingsMap";
 import { Stack } from "expo-router";
 import { useMemo, useState } from "react";
 import { View } from "react-native";
@@ -20,7 +22,9 @@ const index = () => {
           header: () => <ExploreHeader onCategoryChanged={onDataChanged} />,
         }}
       />
-      <Listing listings={items} category={category} />
+      {/* <Listing listings={items as any[]} category={category} /> */}
+      <ListingsMap listings={ListingDataGeo} />
+      <ListingsBottomSheet listings={items} category={category} />
     </View>
   );
 };
