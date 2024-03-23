@@ -1,3 +1,5 @@
+import ModalHeaderText from "@/components/ModalHeaderText";
+import Colors from "@/constants/Colors";
 import { ClerkProvider, TokenCache, useAuth } from "@clerk/clerk-expo";
 import { Ionicons } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
@@ -115,9 +117,21 @@ function RootLayoutNav() {
           name="(modals)/booking"
           options={{
             animation: "fade",
+            headerTransparent: true,
             presentation: "transparentModal",
+            headerTitle: () => <ModalHeaderText />,
             headerLeft: () => (
-              <TouchableOpacity onPress={() => router.back()}>
+              <TouchableOpacity
+                onPress={() => router.back()}
+                style={{
+                  backgroundColor: "white",
+                  borderColor: Colors.grey,
+                  borderRadius: 20,
+                  borderWidth: 1,
+                  padding: 4,
+                  marginLeft: -80,
+                }}
+              >
                 <Ionicons name="close-outline" size={28} />
               </TouchableOpacity>
             ),
