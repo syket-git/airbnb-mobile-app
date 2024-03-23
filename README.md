@@ -10,3 +10,5 @@ Here's what you will get from this app:
 - ✅ Bottom Sheet feature for intuitive content display and navigation.
 - ✅ Dynamic maps and clustering for efficient data visualization and exploration.
 
+![1](https://github.com/syket-git/airbnb-mobile-app/assets/39830305/7882deb3-8346-4f88-ae4b-72418637ee9c)
+![2](https://github.com/syket-git/airbnb-mobile-app/assets/39830305/8283b80f-d524-4e46-b274-3f064d6e946c)
